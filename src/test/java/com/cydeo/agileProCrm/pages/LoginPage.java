@@ -20,4 +20,14 @@ public class LoginPage {
     @FindBy(xpath = "//input[@class = 'login-btn']")
     public WebElement loginBtn;
 
+    @FindBy(xpath = "//div[.='Incorrect login or password']")
+    public WebElement errorText;
+
+    @FindBy(xpath = "//input[@id=\"USER_REMEMBER\"]")
+    public WebElement checkBox;
+
+    @FindBy(xpath = "//a[.=\"Forgot your password?\"]")
+    public WebElement getPasswordLink;
+
+
 }
