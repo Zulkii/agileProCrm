@@ -22,6 +22,7 @@ public class Logout_StepDefinitions {
         loginPage.inputUserName.sendKeys(username);
         loginPage.inputPassword.sendKeys(password);
         loginPage.loginBtn.click();
+        Driver.getDriver().navigate().refresh();
     }
     @When("user click on the user block")
     public void user_click_on_the_user_block() {
