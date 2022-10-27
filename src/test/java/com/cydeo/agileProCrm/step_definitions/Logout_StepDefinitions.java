@@ -1,7 +1,7 @@
 package com.cydeo.agileProCrm.step_definitions;
 
 import com.cydeo.agileProCrm.pages.LoginPage;
-import com.cydeo.agileProCrm.pages.Logout;
+import com.cydeo.agileProCrm.pages.HomePage;
 import com.cydeo.agileProCrm.utilities.ConfigurationReader;
 import com.cydeo.agileProCrm.utilities.Driver;
 import io.cucumber.java.en.And;
@@ -13,7 +13,7 @@ import org.junit.Assert;
 public class Logout_StepDefinitions {
 
     LoginPage loginPage = new LoginPage();
-    Logout logout = new Logout();
+    HomePage homePage = new HomePage();
 
 
     @Given("user logged in with valid credentials {string} and {string}")
@@ -25,11 +25,11 @@ public class Logout_StepDefinitions {
     }
     @When("user click on the user block")
     public void user_click_on_the_user_block() {
-        logout.userBlock.click();
+        homePage.userBlock.click();
     }
     @When("user click on the Logout button")
     public void user_click_on_the_logout_button() {
-        logout.logoutBtn.click();
+        homePage.logoutBtn.click();
     }
     @Then("user should navigated to the login page")
     public void user_should_navigated_to_the_login_page() {
